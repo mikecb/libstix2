@@ -9,13 +9,14 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/freetaxii/libstix2/messages/stix"
+
+	"github.com/mikecb/stix"
 )
 
 func main() {
 	// Create TAXII Message called tm
-	sm := stix.New()
-	i := sm.NewIndicator()
+	sm := stix.NewPackage()
+	i := sm.NewIndicatorPackage()
 
 	i.SetTitle("Malware C2 Indicator 2016")
 
